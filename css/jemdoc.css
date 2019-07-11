@@ -1,5 +1,14 @@
 /* Default css file for jemdoc. */
 
+#myul {
+    width:55.0em; 
+    padding-top: 0.0em;
+    padding-left: 0.85em;
+    background: white;
+    text-align: justify;
+    vertical-align: top;
+}
+
 table#tlayout {
     border: none;
     border-collapse: separate;
@@ -365,3 +374,4 @@ table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
 }
+Status API Training Shop Blog About
