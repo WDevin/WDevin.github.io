@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.16.19"><!-- Primary Meta Tags --><title>OpenClaw：你的本地 AI 自动化助手入门指南 | Devin&#39;s Blog</title><meta name="title" content="OpenClaw：你的本地 AI 自动化助手入门指南 | Devin's Blog"><meta name="description" content="OpenClaw 是一款开源的自托管 AI 代理，通过 Telegram 等聊天应用控制，能够自动化执行文件操作、网络搜索、代码编写等任务。本文介绍其核心功能与上手操作。"><!-- Canonical URL --><link rel="canonical" href="https://devinblogs.me/blog/openclaw/"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://devinblogs.me/blog/openclaw/"><meta property="og:title" content="OpenClaw：你的本地 AI 自动化助手入门指南 | Devin's Blog"><meta property="og:description" content="OpenClaw 是一款开源的自托管 AI 代理，通过 Telegram 等聊天应用控制，能够自动化执行文件操作、网络搜索、代码编写等任务。本文介绍其核心功能与上手操作。"><meta property="og:image" content="https://devinblogs.me/og-image.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://devinblogs.me/blog/openclaw/"><meta property="twitter:title" content="OpenClaw：你的本地 AI 自动化助手入门指南 | Devin's Blog"><meta property="twitter:description" content="OpenClaw 是一款开源的自托管 AI 代理，通过 Telegram 等聊天应用控制，能够自动化执行文件操作、网络搜索、代码编写等任务。本文介绍其核心功能与上手操作。"><meta property="twitter:image" content="https://devinblogs.me/og-image.png"><link rel="stylesheet" href="/_astro/about.BJEs4BG3.css">
+<link rel="stylesheet" href="/_astro/_slug_.B0L1q9B4.css"></head> <body class="min-h-screen flex flex-col">  <header class="py-6 mb-8 border-b border-border"> <div class="max-w-3xl mx-auto px-6"> <nav class="flex items-center justify-between"> <a href="/" class="text-xl font-bold text-primary hover:text-accent transition-colors"> Devin&#39;s Blog </a> <div class="flex items-center gap-6"> <a href="/" class="text-sm font-medium transition-colors text-muted hover:text-primary"> 首页 </a><a href="/blog" class="text-sm font-medium transition-colors text-accent"> 文章 </a><a href="/about" class="text-sm font-medium transition-colors text-muted hover:text-primary"> 关于 </a> </div> </nav> </div> </header> <main class="flex-1"> <article class="max-w-3xl mx-auto px-6"> <!-- Header --> <header class="mb-12">  <h1 class="text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight"> OpenClaw：你的本地 AI 自动化助手入门指南 </h1> <div class="flex flex-wrap items-center gap-4 text-sm text-muted"> <time datetime="2026-02-08T00:00:00.000Z" class=""> 2026-02-08 </time>  </div> <div class="flex flex-wrap gap-2 mt-4"> <span class="px-3 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full border border-accent/20"> AI </span><span class="px-3 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full border border-accent/20"> 自动化 </span><span class="px-3 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full border border-accent/20"> 开源 </span><span class="px-3 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full border border-accent/20"> 工具 </span> </div> </header> <!-- Content --> <div class="prose-custom">  <p>最近发现了一款非常有趣的工具 —— <strong>OpenClaw</strong>，它是一个可以自托管在本地或服务器上的 AI 代理，能够通过 Telegram、Discord 等聊天应用与你交互，并实际执行各种自动化任务。</p>
+<p>相比那些被困在浏览器标签页里的 AI 聊天机器人，OpenClaw 更像是一位真正的数字助手：它不仅能回答问题，还能<strong>帮你写代码、管理文件、搜索网页、运行命令</strong>。</p>
+<h2 id="什么是-openclaw">什么是 OpenClaw？</h2>
+<p>OpenClaw 是由 Peter Steinberger 开发的开源项目，定位为<strong>对话优先的自主 AI 代理</strong>。它的核心理念很简单：用自然语言与 AI 交流，让 AI 替你去执行实际工作。</p>
+<p>这个项目经历过几次更名（ClawdBot → MoltBot → OpenClaw），目前已在 GitHub 上获得大量关注。</p>
+<h3 id="核心特性">核心特性</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>特性</th><th>说明</th></tr></thead><tbody><tr><td><strong>自托管</strong></td><td>运行在自己的机器或 VPS 上，数据隐私完全掌控</td></tr><tr><td><strong>多平台接入</strong></td><td>支持 Telegram、WhatsApp、Discord、iMessage 等</td></tr><tr><td><strong>文件操作</strong></td><td>读取、创建、编辑本地文件</td></tr><tr><td><strong>网络搜索</strong></td><td>实时获取网页信息，不再受限于训练数据</td></tr><tr><td><strong>命令执行</strong></td><td>在沙箱环境中安全运行 Shell 命令</td></tr><tr><td><strong>长期记忆</strong></td><td>跨对话保持上下文，越用越懂你</td></tr></tbody></table>
+<h2 id="安装与配置">安装与配置</h2>
+<p>OpenClaw 的安装过程设计得非常简洁，一条命令即可完成：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -fsSL</span><span style="color:#9ECBFF"> https://openclaw.ai/install.sh</span><span style="color:#F97583"> |</span><span style="color:#B392F0"> bash</span></span>
+<span class="line"></span></code></pre>
+<p>安装脚本会自动检测系统环境、安装依赖，并启动一个交互式的终端界面（TUI）引导你完成后续配置。</p>
+<h3 id="1-选择-ai-模型">1. 选择 AI 模型</h3>
+<p>安装完成后，你需要选择一个 AI 提供商。OpenClaw 支持多种模型：</p>
+<ul>
+<li><strong>Claude</strong>（推荐）- 代码能力强，推理优秀</li>
+<li><strong>OpenAI GPT 系列</strong> - 通用能力强</li>
+<li><strong>Google Gemini</strong> - 速度快，支持 OAuth 登录</li>
+<li><strong>本地模型</strong>（Ollama）- 完全离线，隐私最佳</li>
+</ul>
+<p>模型选择不是永久的，之后随时可以切换或添加备用。</p>
+<h3 id="2-连接-telegram">2. 连接 Telegram</h3>
+<p>这是整个 setup 中最关键的一步：</p>
+<ol>
+<li>在 Telegram 中搜索 <strong>@BotFather</strong></li>
+<li>发送 <code>/newbot</code> 创建新机器人</li>
+<li>按提示设置名称，获取 <strong>Bot Token</strong></li>
+<li>将 Token 粘贴到 OpenClaw 终端中</li>
+</ol>
+<p>完成后，你的 Telegram 机器人就与 OpenClaw 连接成功了。发送 <code>/start</code> 即可开始对话。</p>
+<h3 id="3-配置技能skills">3. 配置技能（Skills）</h3>
+<p>Skills 是 OpenClaw 的能力扩展模块，比如发送邮件、管理日历、操作数据库等。</p>
+<p>初次使用可以选择 <strong>Skip for now</strong>，等熟悉基本操作后再按需安装。你也可以用 JavaScript/TypeScript 编写自定义 Skill，扩展性非常强。</p>
+<h2 id="实际应用场景">实际应用场景</h2>
+<h3 id="场景一代码审查助手">场景一：代码审查助手</h3>
+<p>将你正在开发的项目目录映射给 OpenClaw，然后直接问：</p>
+<blockquote>
+<p>“检查一下 <code>src/components/Button.tsx</code>，看看有没有可访问性问题，还有深色模式下的样式是否正确。”</p>
+</blockquote>
+<p>OpenClaw 会读取文件，像一位资深工程师一样帮你 review 代码。</p>
+<h3 id="场景二文档研究员">场景二：文档研究员</h3>
+<p>学习新技术时不再需要打开二十个标签页：</p>
+<blockquote>
+<p>“去 Stripe API 文档看看，用 Node.js v24 SDK 怎么创建周期性订阅，总结一下必要参数并给我代码示例。”</p>
+</blockquote>
+<p>OpenClaw 会自动浏览网页、提取信息、整理成易于理解的格式。</p>
+<h3 id="场景三日志分析">场景三：日志分析</h3>
+<p>面对庞大的服务器日志不再头疼：</p>
+<blockquote>
+<p>“我下载了服务器日志到 <code>logs/</code> 目录，帮我找出 10:00 到 10:15 之间所有的 JSON 解析错误，并显示堆栈跟踪。”</p>
+</blockquote>
+<p>AI 会帮你过滤、分析、呈现关键信息。</p>
+<h3 id="场景四自动化工作流">场景四：自动化工作流</h3>
+<p>更复杂一点的任务也能胜任：</p>
+<blockquote>
+<p>“帮我创建一个 React 项目，安装 Tailwind CSS，配置好 ESLint 和 Prettier，然后写一个简单的 Todo App 组件。”</p>
+</blockquote>
+<p>OpenClaw 会一步步执行：创建目录、初始化项目、安装依赖、生成代码。</p>
+<h2 id="安全注意事项">安全注意事项</h2>
+<p>OpenClaw 的能力意味着潜在风险，使用时务必注意：</p>
+<ol>
+<li><strong>最小权限原则</strong> - 只映射必要的目录，不要把家目录或 SSH 密钥暴露给它</li>
+<li><strong>人工确认</strong> - 在配置中设置「人工介入」，让危险操作（如删除文件）需要你的确认</li>
+<li><strong>专用工作目录</strong> - 创建一个独立文件夹供 OpenClaw 操作，与重要数据隔离</li>
+<li><strong>非 root 运行</strong> - 永远不要以 root 用户运行 OpenClaw</li>
+</ol>
+<p>把它当作一位<strong>需要监督的初级开发者</strong>：信任但要验证。</p>
+<h2 id="进阶编写自定义-skill">进阶：编写自定义 Skill</h2>
+<p>OpenClaw 的真正威力在于可扩展性。以下是一个简单的 Skill 示例，用于查询加密货币价格：</p>
+<p><strong>skill.json</strong>（能力定义）</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"get_crypto_price"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "description"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"获取加密货币当前价格"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "parameters"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"object"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "properties"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">      "symbol"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">        "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"string"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "description"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"加密货币符号，如 bitcoin"</span></span>
+<span class="line"><span style="color:#E1E4E8">      },</span></span>
+<span class="line"><span style="color:#79B8FF">      "currency"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">        "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"string"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "default"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"usd"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "description"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"法币单位"</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    },</span></span>
+<span class="line"><span style="color:#79B8FF">    "required"</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">"symbol"</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span></code></pre>
+<p><strong>index.js</strong>（实现代码）</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#F97583"> async</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> run</span><span style="color:#E1E4E8">({ </span><span style="color:#FFAB70">symbol</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">currency</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'usd'</span><span style="color:#E1E4E8"> }) {</span></span>
+<span class="line"><span style="color:#F97583">  try</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> url</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> `https://api.coingecko.com/api/v3/simple/price?ids=${</span><span style="color:#E1E4E8">symbol</span><span style="color:#9ECBFF">}&#x26;vs_currencies=${</span><span style="color:#E1E4E8">currency</span><span style="color:#9ECBFF">}`</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> response</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> fetch</span><span style="color:#E1E4E8">(url);</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> data</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#E1E4E8"> response.</span><span style="color:#B392F0">json</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">!</span><span style="color:#E1E4E8">data[symbol]) {</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#E1E4E8"> { error: </span><span style="color:#9ECBFF">"未找到该币种"</span><span style="color:#E1E4E8"> };</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">      symbol: symbol,</span></span>
+<span class="line"><span style="color:#E1E4E8">      price: data[symbol][currency],</span></span>
+<span class="line"><span style="color:#E1E4E8">      currency: currency</span></span>
+<span class="line"><span style="color:#E1E4E8">    };</span></span>
+<span class="line"><span style="color:#E1E4E8">  } </span><span style="color:#F97583">catch</span><span style="color:#E1E4E8"> (error) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> { error: </span><span style="color:#9ECBFF">"获取价格失败"</span><span style="color:#E1E4E8"> };</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span></code></pre>
+<p>将这个 Skill 放入 <code>skills/crypto-price/</code> 目录，重启 OpenClaw 后即可使用：</p>
+<blockquote>
+<p>“比特币现在多少钱？“</p>
+</blockquote>
+<h2 id="总结">总结</h2>
+<p>OpenClaw 代表了 AI 工具从「聊天」向「行动」的进化。它不是又一个困在浏览器里的聊天机器人，而是真正能在你的开发环境中干活的助手。</p>
+<p>对于开发者来说，它意味着：</p>
+<ul>
+<li><strong>更快的原型开发</strong> - 快速生成项目骨架和样板代码</li>
+<li><strong>更少的重复劳动</strong> - 自动化那些枯燥的运维任务</li>
+<li><strong>更好的知识管理</strong> - 把项目文档和标准喂给它，新员工可以直接问 AI</li>
+</ul>
+<p>如果你也对 AI 自动化感兴趣，不妨花一个小时部署一个实例体验一下。智能体的时代已经到来，而 OpenClaw 让这一切触手可及。</p>
+<hr>
+<p><strong>相关链接：</strong></p>
+<ul>
+<li>GitHub: <a href="https://github.com/openclaw/openclaw">https://github.com/openclaw/openclaw</a></li>
+<li>官网: <a href="https://openclaw.ai">https://openclaw.ai</a></li>
+</ul>  </div> <!-- Footer --> <footer class="mt-16 pt-8 border-t border-border"> <a href="/blog" class="inline-flex items-center text-sm font-medium text-muted hover:text-accent transition-colors"> <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path> </svg>
+返回文章列表
+</a> </footer> </article> </main> <footer class="mt-auto py-8 border-t border-border"> <div class="max-w-3xl mx-auto px-6"> <div class="text-center text-sm text-muted"> <p>© 2026 Devin's Blog. All rights reserved.</p> </div> </div> </footer>  </body></html>
